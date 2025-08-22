@@ -1,0 +1,7 @@
+{
+  "name": "visor-clima",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Visor de Clima</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-input [(ngModel)]="ciudad" placeholder="Ingresa una ciudad"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="obtenerClima()">
+    Buscar Clima
+  </ion-button>
+
+  <div *ngIf="error" style="color:red; margin-top:10px;">
+    {{ error }}
+  </div>
+
+  <div *ngIf="temperatura">
+    <h2>🌡️ Temperatura: {{ temperatura }} °C</h2>
+    <p>🌥️ Clima: {{ descripcion }}</p>
+  </div>
+</ion-content>
